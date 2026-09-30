@@ -20,11 +20,23 @@ Para el desarrollo de la aplicación se va a seguir el patron de dearrollo de MV
 - com.tuproyecto.imc.main
 - com.tuproyecto.imc.view
 
-1. **Modelo (com.tuproyecto.imc.model)**
+**Modelo (com.tuproyecto.imc.model)**
+<br>Contiene la clase CalculadoraMC.java con estos métodos:
+- Cálculo de IMC con fórmula.
+- Selección de rango con el IMC recibido.
 
-2. **Vista (com.tuproyecto.imc.view)**
+**Vista (com.tuproyecto.imc.view)**
+<br>Contiene la interfaz que cuenta con:
+- Campos de texto para introducir peso y altura.
+- Un botón para realizar el cálculo.
+- Dos displays para mostrar los resultados.
 
-3. **Controlador (com.tuproyecto.imc.controller)**
+**Controlador (com.tuproyecto.imc.controller)**
+<br>Contiene la clase IMCController.java que cumple las siguiente funciones:
+- Declara las variables miembro para los componentes de la Vista.
+- Instancia el modelo.
+- Implementa el método que enlaza al botón. 
+
 
 
 
