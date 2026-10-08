@@ -4,11 +4,6 @@ import com.tuproyecto.imc.controller.IMCController;
 import com.tuproyecto.imc.model.CalculadoraIMC;
 import com.tuproyecto.imc.view.Calculado_Vista;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
-
 /**
  *
  * @author Elias Pérez Arroyo
@@ -16,16 +11,20 @@ import com.tuproyecto.imc.view.Calculado_Vista;
 public class calculadora_IMC {
 
     public static void main(String[] args) {
+        //Se declaran objetos de las clases del MVC
         Calculado_Vista vista;
         CalculadoraIMC modelo;
         IMCController controlador;
         
-        vista=new Calculado_Vista();
-        modelo=new CalculadoraIMC();
-        controlador=new IMCController(vista,modelo);
+        //Se instancian y se pasan por parámetro del constructor del controlador
+        //Así se trabajaran con las mismas instancias en todo momento con la arquitectura MVC
+        vista = new Calculado_Vista();
+        modelo = new CalculadoraIMC();
+        controlador = new IMCController(vista, modelo);
         
+        //Se llama al método del controlador inicializar() para comenzar a trabajar con la vista
         controlador.inicializar();
-        
+
     }
-    
+
 }
