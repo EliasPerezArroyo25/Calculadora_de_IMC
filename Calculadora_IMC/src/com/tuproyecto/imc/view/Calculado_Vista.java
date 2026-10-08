@@ -30,6 +30,14 @@ public class Calculado_Vista extends javax.swing.JFrame {
         return btnCalcular;
     }
     
+    public void setCalculo(String resultado){
+        lblCalculo.setText(resultado);
+    }
+    
+    public void setClasiDePeso(String clasificacion){
+        lblClasiDePeso.setText(clasificacion);
+    }
+    
     public void mostrarErrorDatos(byte codigoError){
         lblError.setForeground(Color.red);
         if(codigoError==1){
