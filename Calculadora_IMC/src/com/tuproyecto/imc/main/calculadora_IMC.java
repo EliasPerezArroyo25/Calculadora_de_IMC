@@ -1,5 +1,9 @@
 package com.tuproyecto.imc.main;
 
+import com.tuproyecto.imc.controller.IMCController;
+import com.tuproyecto.imc.model.CalculadoraIMC;
+import com.tuproyecto.imc.view.Calculado_Vista;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
@@ -7,15 +11,21 @@ package com.tuproyecto.imc.main;
 
 /**
  *
- * @author DAM2
+ * @author Elias Pérez Arroyo
  */
 public class calculadora_IMC {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Calculado_Vista vista;
+        CalculadoraIMC modelo;
+        IMCController controlador;
+        
+        vista=new Calculado_Vista();
+        modelo=new CalculadoraIMC();
+        controlador=new IMCController(vista,modelo);
+        
+        controlador.inicializar();
+        
     }
     
 }
